@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*  */
+    overflow-y: hidden; 
+}
+.content{
+    background: rgb(213,252,252);
+    background: linear-gradient(90deg, rgba(213,252,252,1) 9%, rgba(213,252,252,1) 10%, rgba(213,252,252,1) 21%);
+}
+#header{
+    text-align: center;
+    position: sticky;
+    top:100px
+}
+.feedback{
+    transition: all .3s;
+    background-size: cover;
+    min-height: 100vh;
+   
+}
+
+.feedback.active{
+    filter: blur(8px);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.container .form{
+    margin-top: 10%;
+    background: #f1f5f3;
+    padding: 1em 2.5em 1.7em 2.5em;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.form > div{
+    font-family: 'Open Sans',sans-serif;
+    margin-top: 8%;
+}
+
+textarea{
+    font-family: 'Open Sans',sans-serif;
+    padding: .8em;
+    border: 2px solid black;
+    outline: none;
+    resize: none;
+    background: rgb(247,252,213);
+background: linear-gradient(90deg, rgba(247,252,213,1) 9%, rgba(247,252,213,1) 10%, rgba(247,252,213,1) 21%, rgba(247,252,213,1) 32%);
+    z-index: 1;
+    border-radius: 5px;
+}
+.form .title{
+    background-color: antiquewhite;
+}
+button{
+    padding: .7em;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Open Sans',sans-serif;
+    background: #000;
+    border: 1px solid #222;
+    color: #f1f5f3;
+    border-radius:5px;
+    font-size: 15px;
+}
+button:hover{
+    background:rgb(18, 117, 136);
+    color:black;
+    font-size: 15.2px;
+
+}
+
+.results{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999999;
+
+    transition: all .5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.results.active{
+    opacity: 1;
+    pointer-events: visible;
+}
+
+
+
+.results .result-box{
+    background: #f1f5f3;
+    padding: 2em 4em;
+    border:2px solid black;
+}
+
+.result-box > div{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 15%;
+}
+
+.sentiment p{
+    font-family:'M PLUS 1 Code',sans-serif;
+}
+
+.close-button button{
+    width: 100%;
+    margin-top: 20%;
+    background: rgb(255, 63, 102);
+}
